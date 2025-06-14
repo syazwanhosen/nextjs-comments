@@ -10,6 +10,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import { getUser } from "./api/users/route";
 
 import "./../styles/avatar.css";
+import { Header } from "../components/Header";
 /**
  * Displays a list of threads, along with a composer for creating
  * new threads.
@@ -54,6 +55,7 @@ export default function Page() {
         }
       >
         <ClientSideSuspense fallback={<Loading />}>
+        <Header/>
           <Example />
         </ClientSideSuspense>
       </ErrorBoundary>

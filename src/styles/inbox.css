@@ -1,0 +1,125 @@
+/* styles/inbox.css */
+
+:root {
+  --color-bg: #fff;
+  --color-border: #e5e7eb;
+  --color-muted: #6b7280;
+  --color-danger: #dc2626;
+  --color-danger-bg: #fee2e2;
+  --color-primary: #111827;
+  --color-accent: #2563eb;
+  --font-base: system-ui, sans-serif;
+}
+
+/* Main popover container */
+.inbox {
+  background-color: var(--color-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  width: 100%;
+  max-width: 360px;
+  max-height: 70vh;
+  overflow-y: auto;
+  font-family: var(--font-base);
+  z-index: 9999;
+  transition: all 0.2s ease;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .inbox {
+    width: 90vw;
+    padding: 14px;
+  }
+}
+
+/* Header */
+.inbox-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.inbox-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.inbox-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Buttons */
+.button {
+  background-color: #f9fafb;
+  border: 1px solid var(--color-border);
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background-color: #f3f4f6;
+}
+
+.button.square {
+  background-color: transparent;
+  padding: 8px;
+  border: none;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.button.destructive {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger);
+  border: none;
+}
+
+.button.destructive:hover {
+  background-color: #fecaca;
+}
+
+/* Notification list */
+.inbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Unread count badge */
+.inbox-unread-count {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: #ef4444;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 9999px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Empty / Error states */
+.empty,
+.error {
+  font-size: 14px;
+  color: var(--color-muted);
+  padding: 12px;
+  text-align: center;
+}
