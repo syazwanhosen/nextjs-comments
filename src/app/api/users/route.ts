@@ -6,7 +6,7 @@ import { NAMES } from "../../../database";
  * For `resolveUsers` in liveblocks.config.ts
  */
 
-function getUser(userId: string) {
+export function getUser(userId: string) {
   if (!userId.startsWith("user-")) {
     return;
   }
