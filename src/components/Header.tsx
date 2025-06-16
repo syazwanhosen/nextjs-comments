@@ -2,7 +2,7 @@
 
 import { ComponentProps } from "react";
 import { useSelf } from "@liveblocks/react/suspense";
-import { getUser } from "../app/api/users/route";
+import { getUser } from "../app/lib/getUser";
 import { InboxPopover } from "./InboxPopover";
 import "./../styles/header.css";
 

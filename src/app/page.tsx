@@ -7,7 +7,7 @@ import { Loading } from "../components/Loading";
 import { Composer, Thread } from "@liveblocks/react-ui";
 import { ClientSideSuspense } from "@liveblocks/react";
 import { ErrorBoundary } from "react-error-boundary";
-import { getUser } from "./api/users/route";
+import { getUser } from "./lib/getUser";
 
 import "./../styles/avatar.css";
 import { Header } from "../components/Header";
