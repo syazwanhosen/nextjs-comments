@@ -15,7 +15,7 @@ export function getUser(userId: string) {
 
   return {
     name: NAMES[userIndex],
-    avatar: `https://liveblocks.io/avatars/avatar-${userIndex}.png`,
+    avatar: `https://api.dicebear.com/7.x/initials/svg?seed=${NAMES[userIndex]}`,
   };
 }
 
