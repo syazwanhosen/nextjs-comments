@@ -1,4 +1,4 @@
-import { NAMES } from "../../database";
+import { NAMES, AI_USER_ID } from "../../database";
 
 /**
  * Get users' info from their ID
@@ -7,7 +7,10 @@ import { NAMES } from "../../database";
 
 export function getUser(userId: string) {
   if (!userId.startsWith("user-")) {
-    return;
+    return {
+    name: AI_USER_ID,
+    avatar: `ai-avatar.png`,
+  };
   }
 
   const userIndex = Number(userId.replace(/^\D+/g, "")) ?? 0;

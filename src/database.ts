@@ -1,4 +1,7 @@
+export const AI_USER_ID = "Liveblocks AI";
+
 export const NAMES = [
+  AI_USER_ID,
   "Charlie Layne",
   "Mislav Abha",
   "Tatum Paolo",
