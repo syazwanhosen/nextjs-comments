@@ -80,7 +80,7 @@ export async function POST(request: Request) {
 
   // Send prompt and context to OpenAI
   const response = await openai.chat.completions.create({
-    model: "gpt-4-1106-preview",
+    model: "gpt-3.5-turbo-0125",
     messages: [
       {
         content: `
