@@ -32,6 +32,7 @@ function Inbox({ className, ...props }: ComponentPropsWithoutRef<"div">) {
               key={inboxNotification.id}
               inboxNotification={inboxNotification}
               components={{ Anchor: Link }}
+              href="/"
             />
           );
         })}
